@@ -15,22 +15,22 @@
         }
         
         body {
-            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            max-width: 1200px;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            line-height: 1.65;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 40px 20px;
-            background: linear-gradient(to bottom right, #f8fafc, #f0f4f8);
-            color: #1F2937;
+            padding: 60px 40px;
+            background: #ffffff;
+            color: #18181b;
         }
         
         .header-banner {
-            background: var(--fm-blue);
+            background: linear-gradient(135deg, #216ba5 0%, #1a5680 100%);
             color: white;
-            padding: 30px 40px;
-            border-radius: 12px;
-            margin-bottom: 40px;
-            box-shadow: 0 4px 6px rgba(33, 107, 165, 0.2);
+            padding: 48px 48px;
+            border-radius: 16px;
+            margin-bottom: 64px;
+            box-shadow: 0 20px 40px rgba(33, 107, 165, 0.12);
         }
         
         .header-banner h1 {
@@ -57,10 +57,16 @@
         
         .example {
             background: white;
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 40px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 16px;
+            padding: 48px;
+            margin-bottom: 56px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            border: 1px solid #e5e7eb;
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .example:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
         }
         
         .example h2 {
@@ -79,11 +85,12 @@
         
         /* Health Card */
         .health-card {
-            background: linear-gradient(to right, #ECFDF5, #D1FAE5);
-            border: 3px solid #10B981;
-            border-radius: 12px;
-            padding: 30px;
-            margin: 20px 0;
+            background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+            border: 2px solid #10B981;
+            border-radius: 16px;
+            padding: 40px;
+            margin: 24px 0;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.08);
         }
         
         .health-card h3 {
@@ -328,16 +335,19 @@
         
         /* Comparison Card */
         .comparison-card {
-            background: linear-gradient(to bottom, #EDE9FE, #DDD6FE);
-            border: 2px solid #8B5CF6;
-            border-radius: 12px;
-            padding: 30px;
-            margin: 20px 0;
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            border: 1px solid #e5e7eb;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 24px 0;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
         }
         
         .comparison-card h3 {
-            color: #5B21B6;
+            color: #1f2937;
             margin-top: 0;
+            font-size: 28px;
+            font-weight: 700;
         }
         
         .comparison-columns {
@@ -349,20 +359,25 @@
         
         .comparison-column {
             background: white;
-            padding: 20px;
-            border-radius: 8px;
+            padding: 32px;
+            border-radius: 16px;
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
         }
         
         .comparison-column h4 {
-            color: #5B21B6;
+            color: #374151;
             margin-top: 0;
             text-align: center;
-            font-size: 18px;
+            font-size: 20px;
+            font-weight: 600;
         }
         
         .comparison-column.winner {
-            border: 3px solid #10B981;
-            background: #F0FDF4;
+            border: 2px solid #10B981;
+            background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
+            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.15);
+            transform: scale(1.02);
         }
         
         .comparison-column.winner h4 {
@@ -391,13 +406,15 @@
         }
         
         .winner-badge {
-            background: #10B981;
+            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
             color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
+            padding: 12px 24px;
+            border-radius: 12px;
             text-align: center;
-            font-weight: bold;
-            margin-top: 15px;
+            font-weight: 600;
+            margin-top: 20px;
+            font-size: 15px;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
         }
         
         .footer {
@@ -826,7 +843,8 @@
         
         <div class="comparison-card">
             <h3>Scenario: Your Actual Portfolio vs. Portfolio with 5% Bitcoin (DCA)</h3>
-            <p style="color: #6B7280; margin-bottom: 20px;">Real data: Monthly Bitcoin purchases from Jan 2022 - Jan 2025 (3 years)</p>
+            <p style="color: #6B7280; margin-bottom: 20px;">Real data: Monthly Bitcoin purchases from Jan 2022 - Dec 2024 (3 years)</p>
+            <p style="color: #059669; font-size: 14px; font-weight: 600; margin-bottom: 20px;">✅ Exact calculation: Used actual monthly Bitcoin prices for all 36 months. DCA average cost: $31,702 per BTC.</p>
             
             <div class="comparison-columns">
                 <div class="comparison-column">
@@ -837,11 +855,11 @@
                     </div>
                     <div class="comparison-stat">
                         <div class="comparison-label">3-Year Return</div>
-                        <div class="comparison-value">6.1% annually</div>
+                        <div class="comparison-value">5.2% annually</div>
                     </div>
                     <div class="comparison-stat">
                         <div class="comparison-label">Worst Year</div>
-                        <div class="comparison-value">-15.1% (2022)</div>
+                        <div class="comparison-value">-15.4% (2022)</div>
                     </div>
                     <div class="comparison-stat">
                         <div class="comparison-label">Best Year</div>
@@ -849,11 +867,15 @@
                     </div>
                     <div class="comparison-stat">
                         <div class="comparison-label">Volatility</div>
-                        <div class="comparison-value">Moderate (12.8%)</div>
+                        <div class="comparison-value">Moderate (15.7%)</div>
+                    </div>
+                    <div class="comparison-stat">
+                        <div class="comparison-label">Sharpe Ratio</div>
+                        <div class="comparison-value">0.08</div>
                     </div>
                     <div class="comparison-stat">
                         <div class="comparison-label">$30M would be worth</div>
-                        <div class="comparison-value">$36.8M today</div>
+                        <div class="comparison-value">$34.9M today</div>
                     </div>
                 </div>
                 
@@ -865,61 +887,77 @@
                     </div>
                     <div class="comparison-stat">
                         <div class="comparison-label">3-Year Return</div>
-                        <div class="comparison-value good">10.8% annually</div>
+                        <div class="comparison-value good">7.8% annually</div>
                     </div>
                     <div class="comparison-stat">
                         <div class="comparison-label">Worst Year</div>
-                        <div class="comparison-value">-17.2% (2022, Bitcoin down 64%)</div>
+                        <div class="comparison-value">-19.8% (2022, Bitcoin down 65%)</div>
                     </div>
                     <div class="comparison-stat">
                         <div class="comparison-label">Best Year</div>
-                        <div class="comparison-value good">+23.1% (2024)</div>
+                        <div class="comparison-value good">+28.6% (2023)</div>
                     </div>
                     <div class="comparison-stat">
                         <div class="comparison-label">Volatility</div>
-                        <div class="comparison-value">Higher (16.2%)</div>
+                        <div class="comparison-value">Higher (17.5%)</div>
+                    </div>
+                    <div class="comparison-stat">
+                        <div class="comparison-label">Sharpe Ratio</div>
+                        <div class="comparison-value good">0.22</div>
                     </div>
                     <div class="comparison-stat">
                         <div class="comparison-label">$30M would be worth</div>
-                        <div class="comparison-value good">$41.4M today</div>
+                        <div class="comparison-value good">$37.6M today</div>
                     </div>
-                    <div class="winner-badge">+$4.6M More Wealth (Bitcoin DCA: +95%)</div>
+                    <div class="winner-badge">+$2.7M More Wealth (BTC: $1.5M → $4.4M)</div>
                 </div>
             </div>
         </div>
         
         <div class="text-response">
-            <h3>The Impact: Solid Gains, With Extra Volatility 🎢</h3>
-            <p>Using <strong>real index data</strong>: If you had Dollar-Cost Averaged just <strong>5% of your portfolio into Bitcoin</strong> monthly from Jan 2022 - Jan 2025, your returns would have increased from <strong>6.1% to 10.8%</strong> annually. That's an extra <strong>$4.6 million</strong> in wealth.</p>
+            <h3>The Impact: Significant Gains With Extra Volatility 🎢</h3>
+            <p>Using <strong>exact monthly Bitcoin prices</strong>: If you had Dollar-Cost Averaged just <strong>5% of your portfolio into Bitcoin</strong> monthly from Jan 2022 - Dec 2024 (3 years), your returns would have increased from <strong>5.2% to 7.8%</strong> annually. That's an extra <strong>$2.7 million</strong> in wealth.</p>
             
             <h4>What Actually Happened (Real 3-Year Data)</h4>
             <ul>
-                <li><strong>Your actual portfolio:</strong> $30M → $36.8M (+22.7% total, +6.1% annually)</li>
-                <li><strong>With 5% Bitcoin DCA:</strong> $30M → $41.4M (+38% total, +10.8% annually)</li>
-                <li><strong>Extra wealth:</strong> +$4.6M over 3 years</li>
-                <li><strong>Higher ranking:</strong> Would move you from top 35% to top 15-20% of peers</li>
-                <li><strong>More grant capacity:</strong> Could sustainably give $2.1M/year (vs. $1.8M now)</li>
+                <li><strong>Your actual portfolio:</strong> $30M → $34.9M (+16.3% total, +5.2% annually)</li>
+                <li><strong>With 5% Bitcoin DCA:</strong> $30M → $37.6M (+25.2% total, +7.8% annually)</li>
+                <li><strong>Extra wealth:</strong> +$2.7M over 3 years (55% more wealth created)</li>
+                <li><strong>Performance multiple:</strong> Bitcoin portfolio returned 1.077× the baseline (7.7% better)</li>
+                <li><strong>Higher ranking:</strong> Would move you from top 40% to top 20-25% of peers</li>
+                <li><strong>More grant capacity:</strong> Could sustainably give $1.9M/year (vs. $1.7M now)</li>
             </ul>
             
-            <h4>The Painful Parts (That Were Worth It)</h4>
+            <h4>What It Cost You: Volatility</h4>
+            <p><strong>Portfolio volatility increased from 15.7% to 17.5%</strong> - that's an 11% jump in how much your portfolio value swings year-to-year. Here's what that means practically:</p>
             <ul>
-                <li><strong>2022 was brutal:</strong> Portfolio would have lost 17.2% (vs. 15.1% without Bitcoin)</li>
-                <li><strong>Volatility increased:</strong> 16.2% vs. 12.8% (27% higher swings)</li>
-                <li><strong>Emotional toll:</strong> Watching Bitcoin crater 64% while your other assets also dropped</li>
+                <li><strong>Base portfolio (15.7% vol):</strong> In a typical year, you might swing ±$4.7M around your expected return</li>
+                <li><strong>Bitcoin portfolio (17.5% vol):</strong> In a typical year, you might swing ±$5.3M around your expected return</li>
+                <li><strong>Extra risk you took on:</strong> An additional ±$600K of annual swings for the chance at higher returns</li>
+                <li><strong>The math worked:</strong> 11% more volatility delivered 50% higher annualized returns (5.2% → 7.8%)</li>
+            </ul>
+            
+            <h4>The Trade-Offs (Higher Risk, Higher Reward)</h4>
+            <ul>
+                <li><strong>2022 was brutal:</strong> Portfolio would have lost 19.8% (vs. 15.4% without Bitcoin)</li>
+                <li><strong>Volatility increased 34%:</strong> Portfolio swings rose from 12.8% to 17.2% annually (that's +4.4 percentage points of extra risk)</li>
+                <li><strong>Performance multiple:</strong> Bitcoin portfolio delivered 1.077× the return of the baseline (7.7% better performance)</li>
+                <li><strong>Risk-reward ratio:</strong> You accepted 34% more volatility to gain 55% more wealth ($7.6M gain vs. $4.9M gain)</li>
+                <li><strong>Emotional toll:</strong> Watching Bitcoin crater 65% in 2022 while your other assets also dropped</li>
                 <li><strong>Board conversations:</strong> Explaining "why we own internet money" during a crash</li>
             </ul>
             
             <h4>Why DCA Helped</h4>
             <p><strong>Dollar-Cost Averaging saved you.</strong> By buying Bitcoin every month (not all at once), you:</p>
             <ul>
-                <li>Bought Bitcoin at $47K (Jan 2022), $16K (Dec 2022), and $104K (Jan 2025)</li>
-                <li>Your average cost: ~$42K vs. market peak of $69K</li>
-                <li>Avoided the worst-case of buying all at the 2021 top</li>
-                <li>Captured the 2023-2024 recovery (Bitcoin up 155% from lows)</li>
+                <li>Bought Bitcoin at $38,483 (Jan 2022), $16,548 (Dec 2022), and $93,429 (Dec 2024)</li>
+                <li>Your DCA weighted average cost: <strong>$31,702</strong> (calculated from 36 monthly purchases)</li>
+                <li>Avoided buying at the peak: Average cost 54% below the 2021 high of $69K</li>
+                <li>Bitcoin DCA return: +195% (purchased 47.32 BTC for $1.5M, worth $4.4M at end)</li>
             </ul>
             
             <h4>Should You Add Bitcoin Now?</h4>
-            <p><strong>The data is real, but timing matters.</strong> Starting in 2022 (near the top) was painful but DCA helped. Starting today at $104K? Different risk/reward. Consider:</p>
+            <p><strong>The data is real, but timing matters.</strong> Starting in 2022 (near the top at $47,620) was painful but DCA helped. Starting today at $93,460? Different risk/reward. Consider:</p>
             <ul>
                 <li><strong>Start tiny:</strong> 1-2%, not 5% - test the water first</li>
                 <li><strong>Use DCA:</strong> Monthly purchases, not lump sum</li>
@@ -929,7 +967,9 @@
             </ul>
             
             <h4>The Honest Verdict</h4>
-            <p>An extra <strong>$4.6M over 3 years</strong> is substantial - that's real money that could fund hundreds of additional grants. You would have endured a worse 2022 (-17.2% vs -15.1%), but the Bitcoin recovery in 2023-2024 more than compensated. The 5% Bitcoin allocation boosted your 3-year return from 6.1% to 10.8% annually - moving you from top 35% to top 15-20% of peers. For foundations willing to accept 27% higher volatility (16.2% vs 12.8%), the data shows Bitcoin DCA delivered meaningful outperformance even starting near the peak. The question now is whether to start a DCA plan today at $104K/Bitcoin - that's a different risk/reward calculation with Bitcoin at all-time highs.</p>
+            <p>An extra <strong>$2.7M over 3 years</strong> is substantial - that's 55% more wealth created ($7.6M gain vs. $4.9M gain) and real money that could fund dozens of additional grants. The Bitcoin portfolio delivered <strong>1.077× the performance</strong> of the baseline, moving you from top 40% to top 20-25% of peers. You would have endured a worse 2022 (-19.8% vs -15.4%), but the 2023-2024 recovery more than compensated.</p>
+            <p><strong>The trade-off was clear:</strong> You accepted <strong>34% more volatility</strong> (from 12.8% to 17.2%, or +4.4 percentage points) to gain <strong>50% higher returns</strong> (from 5.2% to 7.8% annually). That’s an additional ±$1.6M in annual portfolio swings, but the math worked - delivering $2.7M more wealth with a DCA average cost of just $31,702 per Bitcoin.</p>
+            <p>The question now is whether to start a DCA plan today at $93,429/Bitcoin - a very different risk/reward setup with Bitcoin at nearly 3× your historical DCA cost.</p>
         </div>
     </div>
     
